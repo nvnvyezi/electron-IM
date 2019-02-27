@@ -3,6 +3,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
+// config files
+const pkg = require('../package.json');
+
 const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {

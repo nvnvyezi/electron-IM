@@ -1,0 +1,30 @@
+{
+  "prettier.trailingComma": "all",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  "editor.tabSize": 2,
+  "editor.fontFamily": "'Fira Code', 'YaHei Consolas Hybrid', Menlo, Monaco, 'Courier New', monospace",
+  "prettier.eslintIntegration": true,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "400"
+}
