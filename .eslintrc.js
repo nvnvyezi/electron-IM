@@ -5,6 +5,7 @@ module.exports = {
   globals: {
     // 这里值为 false 表示这个全局变量不允许被重新赋值，比如：
   },
+  plugins: ['react-hooks'],
   parserOptions: {
     ecmaVersion: 7,
     sourceType: 'module',
@@ -24,6 +25,7 @@ module.exports = {
   // 这里填入你的项目需要的个性化配置，比如：
   rules: {
     //react 相关配置项
+    'react-hooks/rules-of-hooks': 2,
     //禁止某些propTypes
     'react/forbid-prop-types': [1, { forbid: ['any'] }],
     'react/jsx-boolean-value': 2, //在JSX中强制布尔属性符号
