@@ -4,6 +4,7 @@
     "allowSyntheticDefaultImports": true,
     // 生成相应的 .d.ts文件
     "declaration": true,
+    "alwaysStrict": true,
     // 显示诊断信息
     "diagnostics": false,
     // 更改使TypeScript生成的输出更接近Babel生成的输出
@@ -35,6 +36,7 @@
     "removeComments": true,
     // 启用所有严格类型检查选项
     "strict": true,
+    "strictNullChecks": true,
     // 指定ECMAScript目标版本 
     "target": "esnext",
     // "allowJs": true,
