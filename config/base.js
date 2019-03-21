@@ -56,7 +56,7 @@ const plugins = [
   [
     'styled-jsx/babel',
     {
-      sourceMaps: 'development' === process.env.NODE_ENV,
+      sourceMaps: process.env.NODE_ENV === 'development',
       vendorPrefixes: true,
     },
   ],

@@ -31,7 +31,7 @@ app.on('ready', () => {
   //     slashes: true
   //   })
   // )
-  mainWindow.loadURL('http://localhost:3000')
+  mainWindow.loadURL('http://localhost:7242')
 
   // 打开开发者工具
   mainWindow.openDevTools()

@@ -4,6 +4,7 @@ const os = require('os')
 const devMode = 'production' !== process.env.NODE_ENV
 
 module.exports = {
+  PORT: 7242,
   ENTRY_PATH: path.resolve(__dirname, '../src/'),
   ROOT_PATH: path.resolve(__dirname, '../'),
   OUTPUT_PATH: path.resolve(__dirname, '../dist/page'),
@@ -16,6 +17,6 @@ module.exports = {
   ENTRY: { renderer: path.resolve(__dirname, '../src/renderer/index') },
   OUTPUT: {
     filename: devMode ? 'js/[name].[hash:8].js' : 'js/[name].[chunkhash:8].js',
-    publicPath: 'http://localhost:3000/',
+    publicPath: `http://localhost:7242/`,
   },
 }
