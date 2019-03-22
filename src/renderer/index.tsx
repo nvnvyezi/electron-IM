@@ -15,7 +15,11 @@ import App from './aoo'
 ReactDom.render(<App />, document.getElementById('app'))
 
 const updateOnlineStatus = function() {
-  ipcRenderer.send('online-status-changed', window.navigator.onLine ? 'online' : 'offline')
+  ipcRenderer.send(
+    'online-status-changed',
+    window.navigator.onLine ? 'online' : 'offline'
+  )
 }
 
-updateOnlineStatus()
+window.addEventListener('online', updateOnlineStatus)
+window.addEventListener('offline', updateOnlineStatus)

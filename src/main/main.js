@@ -1,4 +1,6 @@
-const { app, BrowserWindow, Menu, ipcMain } = require('electron')
+import { app, BrowserWindow, Menu } from 'electron'
+
+import online from './online'
 
 // 保持一个对于 window 对象的全局引用，不然，当 JavaScript 被 GC,window 会被自动地关闭
 let mainWindow = null
@@ -40,7 +42,4 @@ app.dock.setMenu(
   ])
 )
 
-// 监听事件
-ipcMain.on('online-status-changed', (event, status) => {
-  console.log(status)
-})
+online()
