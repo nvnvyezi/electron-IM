@@ -8,6 +8,7 @@ module.exports = {
   context: ROOT_PATH,
   entry: ENTRY,
   output: OUTPUT,
+  target: 'electron-renderer',
 
   // 仅在发生错误或新编译时输出
   // stats: 'minimal',

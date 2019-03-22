@@ -8,9 +8,14 @@
 // console.log(currentWindow)
 import React from 'react'
 import ReactDom from 'react-dom'
+import { ipcRenderer } from 'electron'
 
-function App() {
-  return <div>sss</div>
-}
+import App from './aoo'
 
 ReactDom.render(<App />, document.getElementById('app'))
+
+const updateOnlineStatus = function() {
+  ipcRenderer.send('online-status-changed', window.navigator.onLine ? 'online' : 'offline')
+}
+
+updateOnlineStatus()
