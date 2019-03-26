@@ -1,4 +1,4 @@
-import { ipcMain } from 'electron'
+const { ipcMain } = require('electron')
 
 function online() {
   ipcMain.on('online-status-changed', (event, status) => {
@@ -6,4 +6,4 @@ function online() {
   })
 }
 
-export default online
+module.exports = online

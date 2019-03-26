@@ -8,6 +8,8 @@ const resolve = {
   alias: {
     '@': path.resolve(__dirname, '../src/'),
     Images: path.resolve(__dirname, '../src/assets/images/'),
+    Styles: path.resolve(__dirname, '../src/assets/styles/'),
+    Common: path.resolve(__dirname, '../src/common/'),
   },
   extensions: ['.tsx', '.ts', '.js', '.json', '.jsx'],
 }

@@ -25,6 +25,8 @@
     "baseUrl": ".",
     "paths": {
       "Images/*": ["src/assets/images/*"],
+      "Styles/*": ["src/assets/styles/*"],
+      "Common/*": ["src/common/*"],
       "@/*": ["src/*"],
       "*": [
         "node_modules/*",

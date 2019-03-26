@@ -5,7 +5,7 @@ const devMode = 'production' !== process.env.NODE_ENV
 
 module.exports = {
   PORT: 7242,
-  ENTRY_PATH: path.resolve(__dirname, '../src/renderer'),
+  ENTRY_PATH: path.resolve(__dirname, '../src'),
   ROOT_PATH: path.resolve(__dirname, '../'),
   OUTPUT_PATH: path.resolve(__dirname, '../dist/page'),
   DLL_OUTPUT_PATH: path.resolve(__dirname, '../dist/dll'),

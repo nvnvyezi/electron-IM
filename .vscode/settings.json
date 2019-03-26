@@ -5,10 +5,6 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    {
-      "language": "vue",
-      "autoFix": true
-    }
   ],
   "editor.tabSize": 2,
   "editor.fontFamily": "'Fira Code', 'YaHei Consolas Hybrid', Menlo, Monaco, 'Courier New', monospace",

@@ -10,7 +10,24 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import { ipcRenderer } from 'electron'
 
-import App from './aoo'
+import GlobalStyles from './style'
+
+import Nav from './nav'
+
+function App() {
+  return (
+    <div className="box">
+      <Nav />
+      <GlobalStyles />
+      <style jsx>{`
+        .box {
+          height: 100%;
+          display: flex;
+        }
+      `}</style>
+    </div>
+  )
+}
 
 ReactDom.render(<App />, document.getElementById('app'))
 
