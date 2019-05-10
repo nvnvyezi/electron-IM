@@ -1,9 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { ipcRenderer } from 'electron'
 
 import Flex from 'Common/flex'
 
+const list = [
+  {
+    text: '聊天',
+    href: '/chat',
+  },
+  {
+    text: '日历',
+    href: '/calendar',
+  },
+]
+
 export default function Nav() {
+
+  /* 重新定义缩小，放大，关闭按钮 */
   function renderHeader() {
     return (
       <div className="box">
@@ -76,11 +90,32 @@ export default function Nav() {
       </div>
     )
   }
+
+  /* 渲染路由 */
+  function renderNav() {
+    return (
+      <ul className="nav">
+        {list.map((item: { text: string; href: string }) => (
+          <Link key={item.text}
+            to={item.href}>
+            <li>{item.text}</li>
+          </Link>
+        ))}
+        <style jsx>{`
+          .nav {
+            color: #fff;
+          }
+        `}</style>
+      </ul>
+    )
+  }
+
   return (
-    <div className="box">
+    <div className="nav">
       {renderHeader()}
+      {renderNav()}
       <style jsx>{`
-        .box {
+        .nav {
           width: 60px;
           height: 100%;
           background: linear-gradient(to bottom, #55607d, #30374b);

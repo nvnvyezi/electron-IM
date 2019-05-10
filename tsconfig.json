@@ -28,9 +28,7 @@
       "Styles/*": ["src/assets/styles/*"],
       "Common/*": ["src/common/*"],
       "@/*": ["src/*"],
-      "*": [
-        "node_modules/*",
-      ]
+      "*": ["node_modules/*"]
     },
     // 给错误和消息设置样式，使用颜色和上下文。
     "pretty": true,
@@ -39,14 +37,10 @@
     // 启用所有严格类型检查选项
     "strict": true,
     "strictNullChecks": true,
-    // 指定ECMAScript目标版本 
-    "target": "esnext",
+    // 指定ECMAScript目标版本
+    "target": "esnext"
     // "allowJs": true,
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

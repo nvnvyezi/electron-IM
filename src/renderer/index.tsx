@@ -8,28 +8,19 @@
 // console.log(currentWindow)
 import React from 'react'
 import ReactDom from 'react-dom'
+import { BrowserRouter, Switch } from 'react-router-dom'
 import { ipcRenderer } from 'electron'
 
-import GlobalStyles from './style'
+import HomePage from './homepage'
 
-import Nav from './nav'
-
-function App() {
-  return (
-    <div className="box">
-      <Nav />
-      <GlobalStyles />
-      <style jsx>{`
-        .box {
-          height: 100%;
-          display: flex;
-        }
-      `}</style>
-    </div>
-  )
-}
-
-ReactDom.render(<App />, document.getElementById('app'))
+ReactDom.render(
+  <BrowserRouter>
+    <Switch>
+      <HomePage />
+    </Switch>
+  </BrowserRouter>,
+  document.getElementById('app')
+)
 
 const updateOnlineStatus = function() {
   ipcRenderer.send(
