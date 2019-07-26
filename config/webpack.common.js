@@ -13,9 +13,8 @@ module.exports = {
   // 仅在发生错误或新编译时输出
   // stats: 'minimal',
   module: {
-
     // 不依赖其他库的库，不需要解析他们
-    // noParse: //,
+    // noParse: true, // ,
     rules,
   },
   plugins,

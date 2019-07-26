@@ -4,6 +4,7 @@ module.exports = {
     height: 600,
     frame: false,
     backgroundColor: '#fff',
+    webPreferences: { nodeIntegration: true, },
 
     // titleBarStyle: 'hidden',
   },
