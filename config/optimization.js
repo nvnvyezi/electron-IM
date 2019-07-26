@@ -35,13 +35,13 @@ const optimization = {
       },
       indexStyles: {
         name: 'index',
-        test: (m, c, entry = 'index') => 'CssModule' === m.constructor.name && recursiveIssuer(m) === entry,
+        test: (m, c, entry = 'index') => m.constructor.name === 'CssModule' && recursiveIssuer(m) === entry,
         chunks: 'all',
         enforce: true,
       },
       otherStyles: {
         name: 'another',
-        test: (m, c, entry = 'another') => 'CssModule' === m.constructor.name && recursiveIssuer(m) === entry,
+        test: (m, c, entry = 'another') => m.constructor.name === 'CssModule' && recursiveIssuer(m) === entry,
         chunks: 'all',
         enforce: true,
       },
