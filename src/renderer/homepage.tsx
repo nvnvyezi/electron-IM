@@ -1,5 +1,6 @@
 import React from 'react'
-import Router from './route'
+import { Route } from 'react-router-dom'
+
 
 import GlobalStyles from './style'
 
@@ -7,6 +8,10 @@ import { sidebarList } from '../assets/lib/sidebarList'
 
 import Nav from './nav'
 import Header from './header'
+import Chat from './chat/home'
+import Calendar from './calendar/home'
+import Contact from './contact/home'
+import Collection from './collection/home'
 
 export default function HomePage() {
   return (
@@ -14,15 +19,35 @@ export default function HomePage() {
       <div className="sidebar">
         <Header />
         <Nav data={sidebarList} />
-        <div>
-          <Router />
-        </div>
+      </div>
+      <div className="content">
+        <Route 
+          component={Chat}
+          exact
+          path="/chat"
+        />
+        <Route 
+          component={Calendar}
+          exact
+          path="/calendar"
+        />
+        <Route 
+          component={Contact}
+          exact
+          path="/contact"
+        />
+        <Route 
+          component={Collection}
+          exact
+          path="/collection"
+        />
       </div>
       <GlobalStyles />
       <style jsx>{`
         .box {
-          height: 100%;
           display: flex;
+          height: 100%;
+          overflow: hidden;
         }
         .sidebar {
           width: 60px;
@@ -32,6 +57,8 @@ export default function HomePage() {
           -webkit-app-region: drag;
         }
         .content {
+          width: 100%;
+          height: 100%;
         }
       `}</style>
     </div>
